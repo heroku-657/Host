@@ -4,10 +4,10 @@ import time
 from telebot import types
 from gatet import Tele
 import os
-token = '6792487855:AAF_iN5qJsJcBMuYfxywQ0oaEXxrnno-GJc' #bottoken
+token = '7383314239:AAHFal_jdJ9PAIsx9GxkYSVrkeaVdDwuPyQ' #bottoken
 bot=telebot.TeleBot(token,parse_mode="HTML")
-subscriber = '6191863486'
-allowed_users = ['6191863486']  #Your ID
+subscriber = '5372825497'
+allowed_users = ['5372825497']  #Your ID
 @bot.message_handler(commands=["start"])
 def start(message):
     if str(message.chat.id) not in allowed_users:
@@ -16,7 +16,7 @@ def start(message):
     bot.reply_to(message, "𝐒𝐞𝐧𝐝 𝐭𝐡𝐞 𝐭𝐱𝐭 𝐟𝐢𝐥𝐞 𝐧𝐨𝐰")
 @bot.message_handler(commands=["add"])
 def add_user(message):
-    if str(message.chat.id) == '6191863486':  # Only bot owner can add new users
+    if str(message.chat.id) == '5372825497':  # Only bot owner can add new users
         try:
             new_user_id = message.text.split()[1]  # Extract new user ID from the command
             allowed_users.append(new_user_id)
